@@ -39,6 +39,7 @@ function avg(list) {
         }
     }
     ansAvg = ansSum / list.length;
+    ansAvg = parseFloat(ansAvg).toFixed(2);
     return ansAvg;
 }
 
