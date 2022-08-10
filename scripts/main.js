@@ -26,9 +26,10 @@ function readInput() {
 }
 
 function displayStats(list) {
-    alert('For the list that ' + (list.length == 0 ? 'is empty' : list) + ', the average is ' + (isNaN(avg(list)) ? 0 : avg(list)) + ' the minimum is ' + (!isFinite(minimum(list)) ? 0 : minimum(list)) + ' and the maximum is ' + (!isFinite(maximum(list)) ? 0 : maximum(list)));
+    alert('For the list ' + (list.length == 0 ? 'that is empty' : list) + ', the average is ' + (isNaN(avg(list)) ? 0 : avg(list)) + ' the minimum is ' + (!isFinite(minimum(list)) ? 0 : minimum(list)) + ' and the maximum is ' + (!isFinite(maximum(list)) ? 0 : maximum(list)));
 }
 
+// Calculate average
 function avg(list) {
     for (i; i < list.length;i++) {
         if (isNaN(list[i])) {
@@ -43,11 +44,13 @@ function avg(list) {
     return ansAvg;
 }
 
+// check minimum in list
 function minimum(list) {
     min = Math.min.apply(Math, list);
     return min;
 }
 
+// check maximum in list
 function maximum(list) {
     max = Math.max.apply(Math, list);
     return max;
